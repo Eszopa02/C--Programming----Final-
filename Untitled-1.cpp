@@ -26,13 +26,13 @@ int main()
 
     int choice;
 
-    int price = 0;
+    double price = 0;
 
-    int totalPrice;
+    double totalPrice;
 
-    int pricePayed;
+    double pricePayed;
 
-    int remainder;
+    double remainder;
 
     int hundred = 0;
     int fifty = 0;
@@ -179,25 +179,117 @@ int main()
 
             hundred = remainder / 100;
 
-            
+            int k = 0;
 
-            fifty = remainder / 50;
+            double updatedRemainder = 0;
 
-            twenty = remainder / 20;
+            double updatedRemainder2 = 0;
 
-            ten = remainder / 10;
+            double updatedRemainder3 = 0;
 
-            five = remainder / 5;
+            double updatedRemainder4 = 0;
 
-            one = remainder / 1;
+            double updatedRemainder5 = 0;
 
-            quarter = remainder / 0.25;
+            double updatedRemainder6 = 0;
 
-            dime = remainder / 0.10;
+            double updatedRemainder7 = 0;
 
-            nickel = remainder / 0.05;
+            double updatedRemainder8 = 0;
 
-            penny = remainder / 0.01;
+            double updatedRemainder9 = 0;
+
+            double updatedRemainder10 = 0;
+
+            if (hundred > 0)
+            {
+                k = hundred * 100;
+
+                updatedRemainder = remainder - k;
+            }
+
+            fifty = updatedRemainder / 50;
+
+            if (fifty > 0)
+            {
+                k = fifty * 50;
+
+                updatedRemainder2 = updatedRemainder - k;
+            }
+
+            //not sure why this is happening but after fifty code stops checking to see if any of this other change is needed. 
+
+            twenty = updatedRemainder2 / 20;
+
+            if (twenty > 0)
+            {
+                k = twenty * 20;
+
+                updatedRemainder3 = updatedRemainder2 - k;
+            }
+
+            ten = updatedRemainder3 / 10;
+
+            if (ten > 0)
+            {
+                k = ten * 10;
+
+                updatedRemainder4 = updatedRemainder3 - k;
+            }
+
+            five = updatedRemainder4 / 5;
+
+            if (five > 0)
+            {
+                k = five * 5;
+
+                updatedRemainder5 = updatedRemainder4 - k;
+            }
+
+            one = updatedRemainder5 / 1;
+
+            if (one > 0)
+            {
+                k = one * 1;
+
+                updatedRemainder6 = updatedRemainder5 - k;
+            }
+
+            quarter = updatedRemainder6 / 0.25;
+
+            if (quarter > 0)
+            {
+                k = quarter * 0.25;
+
+                updatedRemainder7 = updatedRemainder6 - k;
+            }
+
+            dime = updatedRemainder7 / 0.10;
+
+            if (dime > 0)
+            {
+                k = dime * 0.10;
+
+                updatedRemainder8 = updatedRemainder7 - k;
+            }
+
+            nickel = updatedRemainder8 / 0.05;
+
+            if (nickel > 0)
+            {
+                k = nickel * 0.05;
+
+                updatedRemainder9 = updatedRemainder8 - k;
+            }
+
+            penny = updatedRemainder9 / 0.01;
+
+            if (penny > 0)
+            {
+                k = penny * 0.01;
+
+                updatedRemainder10 = updatedRemainder9 - k;
+            }
 
             std::cout << "\nHundreds: " << hundred << " Fifty: " << fifty << " Twenty: " << twenty << " Ten: " << ten << " Five: " << five << " One: " << one << " Quarters: " << quarter << " Dimes: " << dime << " Nickels: " << nickel << " Pennies: " << penny;
             
